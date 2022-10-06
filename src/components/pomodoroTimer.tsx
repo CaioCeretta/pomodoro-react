@@ -5,11 +5,14 @@ import { Button } from './button';
 import { Timer } from './timer';
 
 interface PomodoroProps {
-  defaultPomodoroTime: number;
+  pomodoroTime: number;
+  shortRestTime: number;
+  longRestTime: number;
+  cycles: number;
 }
 
 export function PomodoroTimer(props: PomodoroProps): JSX.Element {
-  const [mainTime, setMainTime] = React.useState(props.defaultPomodoroTime);
+  const [mainTime, setMainTime] = React.useState(props.pomodoroTime);
 
   useInterval(() => {
     setMainTime(mainTime - 1);
@@ -19,7 +22,33 @@ export function PomodoroTimer(props: PomodoroProps): JSX.Element {
     <div className="pomodoro">
       <h2>You are: working</h2>
       <Timer mainTime={mainTime} />
-      <Button text="Test" onClick={() => console.log(1)}></Button>
+      <div className="controls">
+        <Button text="Test" onClick={() => console.log(1)}></Button>
+        <Button text="Test" onClick={() => console.log(1)}></Button>
+        <Button text="Test" onClick={() => console.log(1)}></Button>
+      </div>
+
+      <div className="details">
+        <p>
+          Testando: jdaisodjasio jaiojdaiosdjaiosj daisojdioas jdiaos jdaiosdj
+          iaos
+        </p>
+
+        <p>
+          Testando: jdaisodjasio jaiojdaiosdjaiosj daisojdioas jdiaos jdaiosdj
+          iaos
+        </p>
+
+        <p>
+          Testando: jdaisodjasio jaiojdaiosdjaiosj daisojdioas jdiaos jdaiosdj
+          iaos
+        </p>
+
+        <p>
+          Testando: jdaisodjasio jaiojdaiosdjaiosj daisojdioas jdiaos jdaiosdj
+          iaos
+        </p>
+      </div>
     </div>
   );
 }
