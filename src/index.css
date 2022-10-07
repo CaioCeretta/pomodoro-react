@@ -22,9 +22,6 @@ body {
   background: #EF5D50;
 }
 
-.hidden {
-  display: none;
-}
 
 .pomodoro {
   background: #FFFFFF;
@@ -69,4 +66,8 @@ body {
 
 .pomodoro .details {
   margin: 20px 0;
+}
+
+.hidden {
+  display: none;
 }
